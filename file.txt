@@ -3,3 +3,44 @@ Section 1
 -> Docker Overview
 -> Getting Strated with Docker
 -> A note on installing Docker
+
+Section 2
+
+-> Basic Docker Commands
+
+Section 3
+
+-> Docker run
+-> Advanced Docker run
+
+Section 4
+
+-> To provide an environment variable to any variable use os.environ.get('ENV_NAME')
+
+Kubernetes : 
+
+-> The API server acts as the front end for Kubernetes the user's management devices command-line interfaces
+
+all talk to the API server to interact with the component cluster.
+
+Next is the etcd key value store the etcd is a distributed reliable key value store used by Kubernetes
+
+to store all data used to manage the cluster think of it this way when you have multiple nodes and multiple
+
+masters in your cluster etcd stores all that information on all the nodes in the cluster in
+
+a distributed manner etcd is responsible for implementing logs within the cluster to ensure there are
+
+no conflicts between the masters the scheduler is responsible for distributing work or containers across
+
+multiple nodes it looks for newly created containers and assigns them to nodes the controllers are the
+
+brain behind orchestration they're responsible for noticing and responding when nodes containers or
+
+endpoints closed down the controllers makes decisions to bring up new containers in such cases the container
+
+runtime is the underlying software that is used to run containers in our case it happens to be Docker
+
+and finally kubelet is the agent that runs on each node in the cluster the agent is responsible for
+
+making sure that the containers are running on the notes as expected.

@@ -1,0 +1,70 @@
+-> My first command
+
+sudo docker run docker/whalesay cowsay Hello-World!
+
+docker run 
+-> The docker run command is used to run a container from an image
+
+docker ps [options]
+-> The Docker ps command lists all running containers and some basic information about them such as
+   the container I.D. the name of the image we used to run the containers.
+   The current status and the name of the container.
+-> to see all containers running or not use the -a option.
+
+docker stop name/id of container
+
+-> To stop a running container Use the Dockers stop command but you must 
+   provide either the container I.D. or the container name.
+
+docker rm container_name
+
+-> use the docker rm command to remove is stopped or exited container 
+   permanently if it prints the name back we are good run the docker ps  
+   command again to verify that is no longer a present
+
+docker pull image_name
+
+-> Use the docker pull command to only pull that image and not run the 
+   container.
+
+docker images
+
+-> 
+
+docker run -d container_name
+
+->Use -d options ot run docker container in detached mode
+  This will run the docker container in the background mode and you will be 
+  back to your prompt immediately.
+
+docker attach container_name/id
+
+->Now if you would like to attach back to the running container later run the 
+  docker attach command and specify the name or I.D. of the docker container.
+
+
+docker run -p 8080:8080 -v /home/einfochips/Downlods/Repo/Docker/jenkins:/var/jenkins_home -u root jenkins/jenkins
+
+-> By using this command we do not have to pick password form terminal and create user every time we run command 
+
+docker inspect container_name
+
+-> To inspect docker container
+
+sudo docker run -d -e POSTGRES_HOST_AUTH_METHOD=trust --name=db postgres
+-> To run postgres in detach mode 
+
+sduo docker history container_name/id 
+-> To see how docker image is created.Basically it will show Dockerfile of image
+
+
+sudo docker system df
+-> This command will show the actual memory consumption by image on your device without including any duplicates
+
+->  if you wanted to see a breakdown by image you can actually run the same command with a -v option
+
+
+Run: docker pull nginx:latest then docker image tag nginx:latest localhost:5000/nginx:latest and finally push it using docker push localhost:5000/nginx:latest.
+We will use the same steps for the second image docker pull httpd:latest and then docker image tag httpd:latest localhost:5000/httpd:latest and finally push it using docker push localhost:5000/httpd:latest
+
+-> Let's remove all the dangling images we have locally. Use docker image prune -a to remove them.
